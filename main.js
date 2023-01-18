@@ -9,55 +9,52 @@ class Producto {
   
   const productos = []
   
+  const carrito = []
+
+
   productos.push(new Producto(1, "Anillo de Plata", 1500))
   productos.push(new Producto(2, "Anillo de Oro", 2500))
   productos.push(new Producto(3, "Pulsera de Plata", 3500))
   productos.push(new Producto(4, "Collar de Oro", 4500))
   
+
+  mostrarProductos();
   
-  function bienvenida() {
-    let tienda = prompt(`HOLA COMO ESTAS?! BIENVENIDA/O A NUESTRA JOYERIA, te gustaria ver alguno de nuestros articulos?
+  
+  function mostrarProductos(){
+    let seleccionUser = parseInt(prompt(`
+    HOLA COMO ESTAS?! BIENVENIDA/O A NUESTRA JOYERIA, te gustaria ver alguno de nuestros articulos?
     1-anillo de Plata $1500
     2-anillo de Oro $2500
     3-Pulsera de plata $3500
-    4-Collar de Oro $4500
-    5-Collar de Plata (sin Stock)
-    Esc: para salir o para termina la compra`);
+    4-Collar de Oro $4500`));  
   
-    return tienda;
-  }
-  
-  let cantidad = 0
-  let total = 0
-  let tienda = bienvenida();
-  
-  while (tienda.toLowerCase() != "esc") {
-    switch (tienda) {
-      case "1":
-        cantidad = parseInt(prompt("Anillo de Plata elije la cantidad de 1 a 3"));
-        total = cantidad * productos[0].precio;
-          alert(`Usted compró ${cantidad} productos por el precio de ${total}`);
-        break;
-      case "2":
-        cantidad = parseInt(prompt("Anillo de Oro elije la cantidad de 1 a 3"));
-        total = cantidad * productos[1].precio;
-          alert(`Usted compró ${cantidad} productos por el precio de ${total}`);
-        break;
-      case "3":
-        cantidad = parseInt(prompt("Pulsera de Plata elije la cantidad de 1 a 3"));
-        total = cantidad * productos[2].precio;
-          alert(`Usted compró ${cantidad} productos por el precio de ${total}`);
-        break;
-      case "4":
-        cantidad = parseInt(prompt("Collar de Oro elije la cantidad de 1 a 3"));
-        total = cantidad * productos[3].precio;
-          alert(`Usted compró ${cantidad} productos por el precio de ${total}`);
-        break;
-      default:
-        alert("producto no encontrado");
-        break;
+    if(seleccionUser > 4 || seleccionUser < 1){
+      alert('ingrese un dato válido')
+      mostrarProductos();
+    } else{
+      const prodElegido = productos.find( prod => prod.id === seleccionUser);
+      console.log(prodElegido);
+      carrito.push(prodElegido)
+      console.log(carrito)
+      continuar();
     }
-    tienda = bienvenida();
-  
-  
+  }
+
+  function continuar(){
+    const continuar = prompt ('desea continuar con la compra? si o no')
+    if(continuar === "si"){
+      mostrarProductos();
+    }else if (continuar === "no"){
+      alert ('muchas gracias por su compra');
+      calcularTotal();
+    }else{
+      alert ('ingrese si o no por favor');
+      mostrarProductos();
+    }
+  }
+
+  function calcularTotal (){
+    const total = carrito.reduce((acc, el) => acc += el.precio, 0)
+    alert(`total de su compra es de ${total}`);
   }
