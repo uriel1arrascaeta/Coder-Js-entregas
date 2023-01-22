@@ -58,3 +58,4 @@ class Producto {
     const total = carrito.reduce((acc, el) => acc += el.precio, 0)
     alert(`total de su compra es de ${total}`);
   }
+

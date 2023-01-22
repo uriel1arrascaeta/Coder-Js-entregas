@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="page-nav">
+        <h1>HARANA JOYAS</h1>
+        <button id="pagar" class="button-checkout" onclick="ultcompra()">Pagar</button>
+    </div>
+    <div class="page-content">
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/AN006.png" />
+            <h4>$50</h4>
+            <button class="button-add" onclick="carrito('product-1', 50)">Agregar</button>
+        </div>
 
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/AN008.png" />
+            <h4>$300</h4>
+            <button class="button-add" onclick="carrito('product-2', 300)">Agregar</button>
+        </div>
 
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/AN010.png" />
+            <h4>$250</h4>
+            <button class="button-add" onclick="carrito('product-3', 250)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/AN011.png" />
+            <h4>$200</h4>
+            <button class="button-add" onclick="carrito('product-4', 200)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/AN013.png" />
+            <h4>$10</h4>
+            <button class="button-add" onclick="carrito('product-5', 10)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>nombre</h3>
+            <img src="./images/SH002.png" />
+            <h4>$650</h4>
+            <button class="button-add" onclick="carrito('product-6', 650)">Agregar</button>
+        </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
