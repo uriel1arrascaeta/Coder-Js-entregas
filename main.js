@@ -16,7 +16,8 @@
     pagar.addEventListener("click",()=>{
     localStorage.removeItem("carrito");
     productos = [];
-    carrito();
+    total = 0;
+    carrito( productos, total);
 })
   }
     
