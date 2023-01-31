@@ -12,14 +12,9 @@
   
 
   function ultcompra() {
-    alert(`muchas gracias por su compra el total es de ${total}`);
-    pagar.addEventListener("click",()=>{
+    alert(`muchas gracias por su compra el total es de ${total}`); 
     localStorage.removeItem("carrito");
-    productos = [];
-    total = 0;
-    carrito( productos, total);
-})
-  }
     
-  localStorage.setItem('carrito','total');
- 
+  }
+  
+  localStorage.setItem('productos','productos');
