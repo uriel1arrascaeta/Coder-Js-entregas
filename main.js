@@ -1,6 +1,7 @@
 
   let productos = [];
   let total = 0;
+  let carrito = []; 
 
 
   function carrito(producto, precio) {
@@ -17,4 +18,5 @@
     
   }
   
-  localStorage.setItem('productos','productos');
+  localStorage.setItem('productos',JSON.stringify(productos));
+  JSON.parse(localStorage.getItem('productos'))
