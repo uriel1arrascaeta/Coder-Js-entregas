@@ -1,51 +1,26 @@
+const items = document.getElementById('items');
+const templateCard = document.getElementById('template-card').content;
+const fragment = document.createDocumentFragment()
 
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  let total = 0;
-
-
-  function agregarcarrito(producto, precio) {
-      console.log(producto, precio);
-      carrito.push(producto);
-      total = total + precio;
-      document.getElementById("pagar").innerHTML = `Pagar $${total}`
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  fetchData()
+});
   
-
-  function ultcompra() {
-    alert(`muchas gracias por su compra el total es de ${total}`); 
-    localStorage.setItem("carrito", JSON.stringify('carrito'));
-    
+const fetchData = async () => {
+  try{
+    const res = await fetch ('api.json')
+    const data = await res.json()
+    pintarCards(data)
+  }catch(error){
+    console.log(error)
   }
-
-  const productos = [
-  {
-    nombre: "anillo",
-    precio: "10000",
-    id: "01"
-  },
-  {
-    nombre: "anillo",
-    precio: "10000",
-    id: "01"
-  },
-  {
-    nombre: "anillo",
-    precio: "10000",
-    id: "01"
-  }, 
-  {
-    nombre: "anillo",
-    precio: "10000",
-    id: "01"
-  } 
-]
-
-function renderizar (){
-  const contenedor= document.querySelector(".contenedor")
-  productos.forEach(p => {
-  const divProducto= document.createElement("div")
-  divProducto.innerHTML= `<div class="card>
-  <img style="width:50px" src="./img/${productos}` // ACA SE ME COMPLICA
-  contenedor.appendChild(divProducto)
+}
+const pintarCards = data => {
+  data.forEach(producto =>{
+    templateCard.querySelector('h5').textContent = producto.title;
+    templateCard.querySelector('p').textContent = producto.precio;
+    const clone = templateCard.cloneNode(true);
+    fragment.appendChild(clone)
   })
-  }
+  items.appendChild(fragment)
+}

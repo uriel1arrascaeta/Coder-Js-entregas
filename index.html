@@ -3,74 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito de compras</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>HARANA JOYAS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
-</head>
 <body>
-    <div class="page-nav">
-        <h1>HARANA JOYAS</h1>
-        <button id="pagar" class="button-checkout" onclick="ultcompra()">Pagar</button>
-    </div>
-    <!-- <div class="page-content">
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/AN006.png" />
-            <h4>$50</h4>
-            <button class="button-add" onclick="carrito('product-1', 50)">Agregar</button>
+    <div class="container">
+        <h4>HARANA</h4>
+        <div class="row" id="items"></div>
+      </div>
+  
+      <!-- template de mi card -->
+      <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <button class="btn btn-dark">Comprar</button>
+            </div>
+          </div>
         </div>
-
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/AN008.png" />
-            <h4>$300</h4>
-            <button class="button-add" onclick="carrito('product-2', 300)">Agregar</button>
-        </div>
-
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/AN010.png" />
-            <h4>$250</h4>
-            <button class="button-add" onclick="carrito('product-3', 250)">Agregar</button>
-        </div>
-
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/AN011.png" />
-            <h4>$200</h4>
-            <button class="button-add" onclick="carrito('product-4', 200)">Agregar</button>
-        </div>
-
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/AN013.png" />
-            <h4>$10</h4>
-            <button class="button-add" onclick="carrito('product-5', 10)">Agregar</button>
-        </div>
-
-        <div class="product-container">
-            <h3>nombre</h3>
-            <img src="./img/SH002.png" />
-            <h4>$650</h4>
-            <button class="button-add" onclick="carrito('product-6', 650)">Agregar</button>
-        </div>
-    </div> -->
-    <div class="contenedor">
-
-    </div>
-
-
-    
-    <script src="./productos"></script>
+      </template>
     <script src="./main.js"></script>
 </body>
 </html>

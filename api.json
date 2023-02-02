@@ -1,0 +1,38 @@
+[
+  {
+    "precio": 10000,
+    "id": 1,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  },
+  {
+    "precio": 10000,
+    "id": 2,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  },
+  {
+    "precio": 10000,
+    "id": 3,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  },
+  {
+    "precio": 10000,
+    "id": 4,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  },
+  {
+    "precio": 10000,
+    "id": 5,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  },
+  {
+    "precio": 10000,
+    "id": 6,
+    "title": "ANILLO",
+    "thumbnailUrl": "./img/AN001.jpg"
+  }
+]
