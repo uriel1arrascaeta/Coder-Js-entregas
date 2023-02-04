@@ -3,36 +3,36 @@
     "precio": 10000,
     "id": 1,
     "title": "ANILLO",
-    "thumbnailUrl": "/img/AN006.jpg"
+    "thumbnailUrl": "/img/AN006.png"
   },
   {
     "precio": 10000,
     "id": 2,
     "title": "ANILLO",
-    "thumbnailUrl": "https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "thumbnailUrl": "./img/AN008.png"
   },
   {
     "precio": 10000,
     "id": 3,
     "title": "ANILLO",
-    "thumbnailUrl": "https://images.pexels.com/photos/1352783/pexels-photo-1352783.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "thumbnailUrl": "./img/AN011.png"
   },
   {
     "precio": 10000,
     "id": 4,
     "title": "ANILLO",
-    "thumbnailUrl": "https://images.pexels.com/photos/1378706/pexels-photo-1378706.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "thumbnailUrl": "./img/AN010.png"
   },
   {
     "precio": 10000,
     "id": 5,
     "title": "ANILLO",
-    "thumbnailUrl": "https://images.pexels.com/photos/15231247/pexels-photo-15231247.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "thumbnailUrl": "./img/AN013.png"
   },
   {
     "precio": 10000,
     "id": 6,
     "title": "ANILLO",
-    "thumbnailUrl": "https://images.pexels.com/photos/1395305/pexels-photo-1395305.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "thumbnailUrl": "./img/SH002.png"
   }
 ]
